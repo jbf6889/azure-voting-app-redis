@@ -23,7 +23,7 @@ pipeline {
         steps {
            sh(script: """
               docker compose up -d
-              sh "chmod +x -R ${env.WORKSPACE}"
+              sh "chmod +x -R ${env.WORKSPACE}/scripts/test_container.sh"
              ./scripts/test_container.sh
            """)
         }
