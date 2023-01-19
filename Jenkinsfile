@@ -26,6 +26,7 @@ pipeline {
               ./scripts/test_container.ps1
            """)
         }
+      }
       stage('Run Tests') {
         steps {
            sh(script: """
