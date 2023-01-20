@@ -25,7 +25,7 @@ pipeline {
               docker compose up -d
               echo ${env.WORKSPACE}
               echo ${BUILD_NUMBER}
-             su ./scripts/test_container.sh
+             ./scripts/test_container.sh
            """)
         }
       }
