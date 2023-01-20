@@ -25,7 +25,7 @@ pipeline {
               docker compose up -d
               echo ${env.WORKSPACE}
               echo ${BUILD_NUMBER}
-              sh "chmod 777 ${env.WORKSPACE}/${BUILD_NUMBER}"/scripts/test_container.sh
+              sh "chmod 777 ${env.WORKSPACE}/scripts/test_container.sh"
              ./scripts/test_container.sh
            """)
         }
