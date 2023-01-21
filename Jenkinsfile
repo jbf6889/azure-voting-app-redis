@@ -59,6 +59,7 @@ pipeline {
                 script {
                      docker.withRegistry("https://index.docker.io/v1",'DockerHub') {
                      def image = docker.build('jbf6889/docker-course:latest')
+                     image.push()
                      }
                 }
              }
