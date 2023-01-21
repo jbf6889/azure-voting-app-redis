@@ -28,7 +28,16 @@ pipeline {
              bash ./scripts/test_container.sh
            """)
         }
+        post {
+             success {
+                 echo "App Started Successfully"
+             }
+             failure {
+                 echo "App failed to start"
+             }
+        }
       }
+
       stage('Run Tests') {
         steps {
            sh(script: """
