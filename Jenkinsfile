@@ -22,7 +22,7 @@ pipeline {
       stage('Start test app') {
         steps {
            sh(script: """
-              docker compose up -d
+              docker-compose up -d
               echo ${env.WORKSPACE}
               echo ${BUILD_NUMBER}
              bash ./scripts/test_container.sh
@@ -39,7 +39,7 @@ pipeline {
       stage('Stop test app') {
         steps {
            sh(script: """
-              docker compose down
+              docker-compose down
               """)
         }
       }
