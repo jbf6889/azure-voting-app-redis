@@ -51,6 +51,17 @@ pipeline {
               docker-compose down
               """)
         }
+        stage('Push Container') {
+        echo "Workspace is $WORKSPACE"
+        dir("$WORKSPACE/azure-vote") {
+           script {
+                docker.withRegistry("https://index.docker.io/v1",'DockerHub') {
+                def image = docker.build('jbf6889/docker-course:latest')
+                }
+           }
+        }
+
+        }
       }
    }
 }
