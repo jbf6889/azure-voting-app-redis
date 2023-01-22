@@ -64,8 +64,8 @@ pipeline {
                 }
              }
         }
-
-        stage('Scan With Trivy'){
+      }
+      stage('Scan With Trivy'){
           steps{
           sh(script: """
           docker run aquasec/trivy
@@ -75,5 +75,5 @@ pipeline {
 
       }
 
-   }
+
 }
