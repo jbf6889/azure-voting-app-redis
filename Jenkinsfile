@@ -10,7 +10,7 @@ DEV_ENV = [
 platform: 'EKS',
 activated: 'yes',
 runTests: 'no',
-branch: "${BRANCH_NAME}"
+branch: "${emv.BRANCH_NAME}"
 ]
 
 }
